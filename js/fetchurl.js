@@ -5,6 +5,7 @@ const inpUrl = document.getElementById("inpUrl")
 const pbFetch = document.getElementById("pbFetchUrl")
 const pbFetchRegioner = document.getElementById("pbFetchRegioner")
 const textArea = document.getElementById("txt")
+const pbClear = document.getElementById("pbClear")
 
 function fetchAnyUrl(url) {
     console.log("inside fetch json url=" + url)
@@ -36,8 +37,12 @@ async function actionFetchRegioner(btn) {
     textArea.textContent = regioner
 }
 
+function clearText() {
+    textArea.textContent = '';
+}
 
 pbFetchRegioner.addEventListener('click', actionFetchRegioner)
 pbFetch.addEventListener('click', actionFetchUrl)
+pbClear.addEventListener('click', clearText)
 
 
